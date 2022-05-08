@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace HW_LINQ
 {
@@ -6,7 +10,21 @@ namespace HW_LINQ
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            List<int> selectedNumbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
+            Select(selectedNumbers);
+        }
+        static void Select(List<int> list)
+        {
+            foreach (var num in list)
+            {
+                Console.Write(num + ", ");
+            }
+        }
+
+        static void Where()
+        {
+
         }
     }
 }
