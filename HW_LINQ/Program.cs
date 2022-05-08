@@ -70,10 +70,8 @@ namespace HW_LINQ
             {
                 Console.Write(list + ", ");
             }
-
-
-
-
+            Console.WriteLine();
+            Console.WriteLine(unionList.First());
         }
     }
 }
