@@ -13,6 +13,9 @@ namespace HW_LINQ
 
             List<int> selectedNumbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
             Select(selectedNumbers);
+            Console.WriteLine();
+            List<string> selectedStrings = new List<string>() { "abc", "DBe", "Eaax1", "X5a", "BCD", "cgj" };
+            Where(selectedStrings);
         }
         static void Select(List<int> list)
         {
@@ -22,8 +25,14 @@ namespace HW_LINQ
             }
         }
 
-        static void Where()
+        static void Where(List<string> list)
         {
+
+            foreach (var str in list)
+            {
+                if (str.Length > 4)
+                Console.WriteLine(str);
+            }
 
         }
     }
