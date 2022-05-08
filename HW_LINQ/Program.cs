@@ -16,6 +16,31 @@ namespace HW_LINQ
             Console.WriteLine();
             List<string> selectedStrings = new List<string>() { "abc", "DBe", "Eaax1", "X5a", "BCD", "cgj" };
             Where(selectedStrings);
+            var results_ints = selectedNumbers.OrderBy(selectedNumbers => selectedNumbers);
+            var results_ints2 = selectedNumbers.OrderByDescending(selectedNumbers => selectedNumbers);
+            var results_strings = selectedStrings.OrderBy(selectedStrings => selectedStrings);
+            var results_strings2 = selectedStrings.OrderByDescending(selectedStrings => selectedStrings);
+            foreach (var list in results_ints)
+            {
+                Console.Write(list + ", ");
+            }
+            Console.WriteLine();
+            foreach (var list in results_ints2)
+            {
+                Console.Write(list + ", ");
+            }
+            Console.WriteLine();
+            foreach (var list in results_strings)
+            {
+                Console.Write(list + ", ");
+            }
+            Console.WriteLine();
+            foreach (var list in results_strings2)
+            {
+                Console.Write(list + ", ");
+            }
+            Console.WriteLine();
+
         }
         static void Select(List<int> list)
         {
