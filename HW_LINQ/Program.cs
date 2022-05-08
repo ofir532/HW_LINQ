@@ -72,6 +72,8 @@ namespace HW_LINQ
             }
             Console.WriteLine();
             Console.WriteLine(unionList.First());
+            Console.WriteLine(unionList.Max(unionList => unionList));
+
         }
     }
 }
