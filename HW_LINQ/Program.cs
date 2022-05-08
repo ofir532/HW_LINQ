@@ -12,15 +12,26 @@ namespace HW_LINQ
         {
 
             List<int> selectedNumbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
-            Select(selectedNumbers);
+            var results_ints0 = selectedNumbers.Select(selectedNumbers => selectedNumbers);
+            foreach (var list in results_ints0)
+            {
+                Console.Write(list + ", ");
+            }
             Console.WriteLine();
+
             List<string> selectedStrings = new List<string>() { "abc", "DBe", "Eaax1", "X5a", "BCD", "cgj" };
-            Where(selectedStrings);
-            var results_ints = selectedNumbers.OrderBy(selectedNumbers => selectedNumbers);
+            var results_strings0 = selectedStrings.Where(selectedStrings => selectedStrings.Length > 4);
+            foreach (var list in results_strings0)
+            {
+                Console.WriteLine(list + ", ");
+            }
+
+
+            var results_ints1 = selectedNumbers.OrderBy(selectedNumbers => selectedNumbers);
             var results_ints2 = selectedNumbers.OrderByDescending(selectedNumbers => selectedNumbers);
-            var results_strings = selectedStrings.OrderBy(selectedStrings => selectedStrings);
+            var results_strings1 = selectedStrings.OrderBy(selectedStrings => selectedStrings);
             var results_strings2 = selectedStrings.OrderByDescending(selectedStrings => selectedStrings);
-            foreach (var list in results_ints)
+            foreach (var list in results_ints1)
             {
                 Console.Write(list + ", ");
             }
@@ -30,7 +41,7 @@ namespace HW_LINQ
                 Console.Write(list + ", ");
             }
             Console.WriteLine();
-            foreach (var list in results_strings)
+            foreach (var list in results_strings1)
             {
                 Console.Write(list + ", ");
             }
@@ -40,24 +51,6 @@ namespace HW_LINQ
                 Console.Write(list + ", ");
             }
             Console.WriteLine();
-
-        }
-        static void Select(List<int> list)
-        {
-            foreach (var num in list)
-            {
-                Console.Write(num + ", ");
-            }
-        }
-
-        static void Where(List<string> list)
-        {
-
-            foreach (var str in list)
-            {
-                if (str.Length > 4)
-                Console.WriteLine(str);
-            }
 
         }
     }
